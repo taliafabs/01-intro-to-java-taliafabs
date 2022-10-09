@@ -32,20 +32,12 @@ public class Basics {
      *    (Relevant reading: 1.1.2. Defining methods)
      */
     public static void main(final String[] args) {
-        /* 3. In Python, we could print out code using the print() function.
-         *    In Java, we do the same thing by using System.out.println();
-         *    In the line below, we print the result of 7 + 5
-         *
-         *    (Relevant reading: 1.1.3. Printing things)
-         */
         System.out.println(7 + 5);
 
         /* TODO (Task 1): Write a line of code below that prints the string
          *                Hello World!
          */
         System.out.println("Hello World!");
-
-
 
         /* 4. In Python, we could declare variables using a simple assignment
          *    statement. For example:
@@ -64,8 +56,6 @@ public class Basics {
          *                value 100.
          */
          int my_variable = 100;
-
-
 
         /* Do not remove the line below: if you did task 2 correctly, then
          * you should see the message "my_variable's value is 100" if you run
@@ -101,10 +91,9 @@ public class Basics {
          * Current count: 1
          * Current count: 0
          */
-        
-        
-
-
+        for (int i = 10; i >= 0; i = i - 1) {
+          System.out.println("Current count: " + i);
+        }
     }
 
     /**
@@ -143,11 +132,14 @@ public class Basics {
          *                You may also assume that to_split always has 7 words
          *                separated by spaces, so no loops are required, though
          *                you may use them if you wish.
+         *
          */
         StringBuilder ret = new StringBuilder();
+        String[] to_split_array = to_split.split(" ");
 
-        // Fill in the rest of the body here
-
+        for (String part : to_split_array){
+            ret.append(part.charAt(0));
+        }
         return ret.toString();
     }
 
@@ -167,15 +159,25 @@ public class Basics {
      */
     public static int oddSum(int[] arr) {
         int current_sum = 0;
+        if (arr.length <= 1){
+            return 0;
+        }
+        else {
 
-        /* TODO (Task 5): Complete this method body using a for-loop.
-         *                You can find the length of an array by using the
-         *                .length attribute (e.g. arr.length)
-         *                You can index into arrays as we do in Python
-         *                (e.g. arr[i] gives you the item at index i).
-         */
 
-        return current_sum;
+            /* TODO (Task 5): Complete this method body using a for-loop.
+             *                You can find the length of an array by using the
+             *                .length attribute (e.g. arr.length)
+             *                You can index into arrays as we do in Python
+             *                (e.g. arr[i] gives you the item at index i).
+             */
+            for (int index = 1; index < arr.length; index = index + 2)
+            {
+                current_sum += arr[index];
+            }
+
+            return current_sum;
+        }
     }
 
 

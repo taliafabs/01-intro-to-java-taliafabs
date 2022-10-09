@@ -43,6 +43,7 @@ public class Basics {
         /* TODO (Task 1): Write a line of code below that prints the string
          *                Hello World!
          */
+        System.out.println("Hello World!");
 
 
 
@@ -62,6 +63,7 @@ public class Basics {
          * TODO (Task 2): Create a variable named my_variable and assign it the
          *                value 100.
          */
+         int my_variable = 100;
 
 
 
@@ -99,6 +101,8 @@ public class Basics {
          * Current count: 1
          * Current count: 0
          */
+        
+        
 
 
     }
